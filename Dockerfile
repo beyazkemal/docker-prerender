@@ -8,12 +8,10 @@ RUN apt-get update -y && apt-get install -y \
     python2.7 python-pip \
     libfreetype6 libfontconfig
 
-RUN mkdir /data
-
-RUN mkdir /src && \
+RUN mkdir /data && \
     cd /src && \
-    git clone --recurse-submodules https://github.com/prerender/prerender.git && \
+    git clone https://github.com/prerender/prerender.git && \
     cd prerender && \
     npm install && \
 
-CMD node /src/prerender/server.js
+CMD node /data/prerender/server.js
