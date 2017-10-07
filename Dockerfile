@@ -9,7 +9,7 @@ RUN apt-get update -y && apt-get install -y \
     libfreetype6 libfontconfig
 
 RUN mkdir /data && \
-    cd /src && \
+    cd /data && \
     git clone https://github.com/prerender/prerender.git && \
     cd prerender && \
     npm install && \
