@@ -12,6 +12,6 @@ RUN mkdir /data && \
     cd /data && \
     git clone https://github.com/prerender/prerender.git && \
     cd prerender && \
-    npm install && \
+    npm install
 
-CMD node /data/prerender/server.js
+CMD ["node", "/data/prerender/server.js"]
