@@ -10,7 +10,7 @@ RUN apt-get update -y && apt-get install -y \
 
 RUN mkdir /data && \
     cd /data && \
-    git clone https://github.com/prerender/prerender.git && \
+    git clone https://github.com/beyazkemal/prerender.git && \
     cd prerender && \
     npm install
 
