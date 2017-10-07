@@ -8,7 +8,7 @@ var server = prerender({
     });
 
 
-server.use(prerender.removeScriptTags());
+//server.use(prerender.removeScriptTags());
 
 if (process.env.BASIC_AUTH_USERNAME) {
     server.use(prerender.basicAuth());
