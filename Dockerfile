@@ -10,9 +10,10 @@ RUN apt-get update -y && apt-get install -y \
 
 RUN mkdir /data
 
-ADD ./package.json /data/package.json
-RUN cd /data && npm install
+RUN mkdir /src && \
+    cd /src && \
+    git clone --recurse-submodules https://github.com/prerender/prerender.git && \
+    cd prerender && \
+    npm install && \
 
-ADD . /data/
-
-CMD node /data/server.js
+CMD node /src/prerender/server.js
